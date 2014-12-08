@@ -1,33 +1,3 @@
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:1
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:1
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:2
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:2
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:3
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:3
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:4
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:4
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:5
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:5
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------after query....
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:1
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:1
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:0
 INFO main com.louis.mybatis.test.SelectDemo3 - ------------Cache Status------------
 INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:1
 INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
@@ -51,12 +21,6 @@ INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:4
 INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
 INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
 INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:4
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------------------------------
-INFO main com.louis.mybatis.test.SelectDemo3 - ------------Cache Status------------
-INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:5
-INFO main com.louis.mybatis.test.SelectDemo3 - DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.DepartmentsMapper:0
-INFO main com.louis.mybatis.test.SelectDemo3 - com.louis.mybatis.dao.EmployeesMapper:5
 INFO main com.louis.mybatis.test.SelectDemo3 - ------------------------------------
 INFO main com.louis.mybatis.test.SelectDemo3 - ------------Cache Status------------
 INFO main com.louis.mybatis.test.SelectDemo3 - EmployeesMapper:0

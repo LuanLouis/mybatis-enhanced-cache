@@ -52,13 +52,6 @@ public class SelectDemo3 {
         result = sqlSession.selectList("com.louis.mybatis.dao.EmployeesMapper.selectWithDepartments",params);
         sqlSession.commit();
         checkCacheStatus(sqlSession);
-        params.put("employeeId", 14);
-        result = sqlSession.selectList("com.louis.mybatis.dao.EmployeesMapper.selectWithDepartments",params);
-        sqlSession.commit();
-        checkCacheStatus(sqlSession);
-        params.put("min_salary", 15);
-		result = sqlSession.selectList("com.louis.mybatis.dao.EmployeesMapper.selectWithDepartments",params);
-		sqlSession.commit();
 		Department department = sqlSession.selectOne("com.louis.mybatis.dao.DepartmentsMapper.selectByPrimaryKey",10);
 		department.setDepartmentName("updated");
 		sqlSession2.update("com.louis.mybatis.dao.DepartmentsMapper.updateByPrimaryKey", department);

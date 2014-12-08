@@ -32,7 +32,6 @@ public  class EnhancedCachingExecutor implements Interceptor {
 	private Set<String>   updateStatementOnCommit = new HashSet<String>();
 	EnhancedCachingManager cachingManager = EnhancedCachingManagerImpl.getInstance();
 	
-	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
 		String name = invocation.getMethod().getName();
 		Object result =null;
@@ -59,7 +58,6 @@ public  class EnhancedCachingExecutor implements Interceptor {
 		return result;
 	}
 
-	@Override
 	public Object plugin(Object target) {
 		return Plugin.wrap(target, this);
 	}
@@ -174,7 +172,6 @@ public  class EnhancedCachingExecutor implements Interceptor {
 	 * Executor插件配置信息加载点
 	 * properties中有 "dependency" 属性来指示 配置的缓存依赖配置信息，读取文件，初始化EnhancedCacheManager
 	 */
-	@Override
 	public void setProperties(Properties properties) {
 		
 		if(!cachingManager.isInitialized())
