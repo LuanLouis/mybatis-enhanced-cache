@@ -125,7 +125,7 @@ public  class EnhancedCachingExecutor implements Interceptor {
 
 	protected Object processClose(Invocation invocation) throws Throwable {
 		Object result = invocation.proceed();
-		boolean forceRollback = (boolean) invocation.getArgs()[0];
+		boolean forceRollback = (Boolean) invocation.getArgs()[0];
 		if(forceRollback)
 		{
 			clearSessionData();
@@ -167,7 +167,6 @@ public  class EnhancedCachingExecutor implements Interceptor {
 		cachingManager.clearRelatedCaches(updateStatementOnCommit);
 		clearSessionData();
 	}
-
 	
 	/**
 	 * 

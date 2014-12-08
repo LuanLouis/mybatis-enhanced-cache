@@ -36,12 +36,10 @@ public class EnhancedCachingManagerImpl implements EnhancedCachingManager{
 		return enhancedCacheManager==null ? (enhancedCacheManager =new EnhancedCachingManagerImpl()):enhancedCacheManager;
 	}
 	
-	@Override
 	public void refreshCacheKey(CacheKeysPool keysPool) {
 		sharedCacheKeysPool.putAll(keysPool);
 		//sharedCacheKeysPool.display();
 	}
-	@Override
 	public void clearRelatedCaches(final Set<String> set) {
 		//sharedCacheKeysPool.display();
 		for(String observable:set)
@@ -60,12 +58,10 @@ public class EnhancedCachingManagerImpl implements EnhancedCachingManager{
 			sharedCacheKeysPool.remove(observable);
 		}
 	}
-	@Override
 	public boolean isInitialized() {
 		return initialized;
 	}
 	
-	@Override
 	public void initialize(Properties properties)
 	{
 		String dependency = properties.getProperty("dependency");
@@ -100,7 +96,7 @@ public class EnhancedCachingManagerImpl implements EnhancedCachingManager{
 			this.cacheEnabled = true;
 		}
 	}
-	@Override
+	
 	public void appendStatementCacheMap(String statementId, Cache cache) {
 		if(holds.containsKey(statementId)&& holds.get(statementId)!=null)
 		{
@@ -108,7 +104,7 @@ public class EnhancedCachingManagerImpl implements EnhancedCachingManager{
 		}
 		holds.put(statementId, cache);
 	}
-	@Override
+	
 	public boolean isCacheEnabled() {
 		return cacheEnabled;
 	}
