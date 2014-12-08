@@ -37,8 +37,8 @@ MyBatis Enhanced Cache, Control your Caches precisely! <br>
 
 使用方法：
 ----
-使用此插件非常简单：<br>
-1. 在mybatisConfig.xml 文件中定义plugin节点如下：
+使用此插件非常简单：
+  1. 在mybatisConfig.xml 文件中定义plugin节点如下：
 ```xml
   <plugins>
        <plugin interceptor="org.luanlouis.mybatis.plugin.cache.EnhancedCachingExecutor">
@@ -47,7 +47,7 @@ MyBatis Enhanced Cache, Control your Caches precisely! <br>
        </plugin>
   </plugins>
 ```  
-2. dependencys.xml配置文件，配置StatemntId依赖关系
+  2. dependencys.xml配置文件，配置StatemntId依赖关系
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <dependencies>
@@ -58,5 +58,5 @@ MyBatis Enhanced Cache, Control your Caches precisely! <br>
    </statements>
 </dependencies>
 ```
-* <statement>节点配置更新语句和查询语句的依赖关系，如果id表示的更新语句执行了，会清空由<observer>配置的id表示的查询语句生成的缓存。
-* <observer>节点表示当父节点<statement> id表示的更新语句执行后，应该清除此语句所产生的缓存
+* \<statement>节点配置更新语句和查询语句的依赖关系，如果id表示的更新语句执行了，会清空由<observer>配置的id表示的查询语句生成的缓存。
+* \<observer>节点表示当父节点<statement> id表示的更新语句执行后，应该清除此语句所产生的缓存
