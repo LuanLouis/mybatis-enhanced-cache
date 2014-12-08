@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<settings>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="logImpl" value="LOG4J"/>
+</settings>
+
+
+  <plugins>
+       <plugin interceptor="org.luanlouis.mybatis.plugin.cache.EnhancedCachingExecutor">
+          <property name="dependency" value="dependencys.xml"/>
+          <property name="cacheEnabled" value="true"/>
+       </plugin>
+  </plugins>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC" />
+      <dataSource type="POOLED">
+					<property name="driver" value="oracle.jdbc.driver.OracleDriver" />  
+			        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />  
+			        <property name="username" value="louis" />  
+			        <property name="password" value="123456" />
+      </dataSource>
+    </environment>
+  </environments>
+    <mappers>
+       <mapper  resource="com/louis/mybatis/domain/EmployeesMapper.xml"/>
+       <mapper  resource="com/louis/mybatis/domain/DepartmentsMapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.louis.mybatis.dao.DepartmentsMapper" >
+   
+   <cache></cache>
+
+  <resultMap id="BaseResultMap" type="com.louis.mybatis.model.Department" >
+    <id column="DEPARTMENT_ID" property="departmentId" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT_NAME" property="departmentName" jdbcType="VARCHAR" />
+    <result column="MANAGER_ID" property="managerId" jdbcType="DECIMAL" />
+    <result column="LOCATION_ID" property="locationId" jdbcType="DECIMAL" />
+  </resultMap>
+  
+  
+  <sql id="Base_Column_List" >
+    DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID
+  </sql>
+  
+  <update id="updateByPrimaryKey" parameterType="com.louis.mybatis.model.Department" >
+    update HR.DEPARTMENTS
+    set DEPARTMENT_NAME = #{departmentName,jdbcType=VARCHAR},
+      MANAGER_ID = #{managerId,jdbcType=DECIMAL},
+      LOCATION_ID = #{locationId,jdbcType=DECIMAL}
+    where DEPARTMENT_ID = #{departmentId,jdbcType=DECIMAL}
+  </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from HR.DEPARTMENTS
+    where DEPARTMENT_ID = #{departmentId,jdbcType=DECIMAL}
+  </select>
+</mapper>

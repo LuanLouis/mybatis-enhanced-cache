@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.louis.mybatis.dao.EmployeesMapper">
+
+  <cache eviction="LRU" flushInterval="100000" size="10000"/>
+
+  <resultMap id="BaseResultMap" type="com.louis.mybatis.model.Employee">
+    <id column="EMPLOYEE_ID" jdbcType="DECIMAL" property="employeeId" />
+    <result column="FIRST_NAME" jdbcType="VARCHAR" property="firstName" />
+    <result column="LAST_NAME" jdbcType="VARCHAR" property="lastName" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="PHONE_NUMBER" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="HIRE_DATE" jdbcType="DATE" property="hireDate" />
+    <result column="JOB_ID" jdbcType="VARCHAR" property="jobId" />
+    <result column="SALARY" jdbcType="DECIMAL" property="salary" />
+    <result column="COMMISSION_PCT" jdbcType="DECIMAL" property="commissionPct" />
+    <result column="MANAGER_ID" jdbcType="DECIMAL" property="managerId" />
+    <result column="DEPARTMENT_ID" jdbcType="DECIMAL" property="departmentId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, 
+    COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID
+  </sql>
+  
+  
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap" useCache="true">
+    select 
+    <include refid="Base_Column_List" />
+    from HR.EMPLOYEES
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </select>
+  
+  <select id="selectWithDepartments" parameterType="java.lang.Integer" resultMap="BaseResultMap" useCache="true" >
+    select 
+    *
+    from HR.EMPLOYEES t left join HR.DEPARTMENTS S ON T.DEPARTMENT_ID = S.DEPARTMENT_ID
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </select>
+  
+  <select id="selectByMinSalary" parameterType="java.util.Map" resultMap="BaseResultMap" useCache="true">
+    select 
+    	EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, SALARY
+    	from LOUIS.EMPLOYEES
+    	<if test="min_salary != null">
+    		where SALARY &lt; #{min_salary,jdbcType=DECIMAL}
+    	</if>
+  </select>
+  
+</mapper>

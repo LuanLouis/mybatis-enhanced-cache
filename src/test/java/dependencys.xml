@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies>
+   <statements>
+       <statement id="com.louis.mybatis.dao.DepartmentsMapper.updateByPrimaryKey">
+          <observer id="com.louis.mybatis.dao.EmployeesMapper.selectWithDepartments" />
+       </statement>
+   </statements>
+</dependencies>
