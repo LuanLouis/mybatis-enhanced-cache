@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 记录MyBatis的每次查询的查询所产生的CacheKey
  * 对于由某个特定的statementId 所执行的查询，其查询所产生的CacheKey存放到一个Set<Ojbect>集合中，
  * 以<statementId ,Set<Object>>的形式存储到CacheKey缓冲池中
+ * example test
  * @author louluan
  * @date   2014-12-5
  */
