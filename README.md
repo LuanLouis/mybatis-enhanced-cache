@@ -1,14 +1,14 @@
 mybatis-enhanced-cache
 ======================
 
-简介
+简 介
 ----
 MyBatis Enhanced Cache, Control your Caches precisely! <br>
 该插件主要是为了弥补MyBatis二级缓存控制上的不足，提高二级缓存Cache和数据库数据的同步性和一致性，处理各个Cache之间的关联关系。
 该插件可以精确地管理MyBatis的二级缓存，实现对MyBatis二级缓存细粒度的控制。<br>
 当执行过对数据库表的更新操作(update、delete、insert)时，可以指定清除由特定的StatementId表示的查询语句产生的缓存。<br>
 
-应用场景：
+应 用 场 景：
 -----
 当前的MyBaits对于缓存的比较粗糙，一般为一个Mapper配置一个Cache缓存，或者多个Mapper共用一个缓存。
 而对缓存的维护都是独立的，缓存之间不会相互影响，指定的Mapper中的语句只会影响到该Mapper对应的Cache缓存。
